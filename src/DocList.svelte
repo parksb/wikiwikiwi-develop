@@ -1,17 +1,21 @@
 <script>
+  import fetchDocList from './services/fetchDocList';
   import DocListItem from './DocListItem.svelte';
-
-  const docs = [
-    {
-      id: 0,
-      title: 'Doc 1',
-    }, {
-      id: 1,
-      title: 'Doc 2',
-    }
-  ]
+  const docs = fetchDocList(); 
 </script>
 
-{#each docs as doc}
-  <DocListItem id={doc.id} title={doc.title} />
-{/each}
+<style>
+  table {
+    padding: 10px 0 10px 0;
+  }
+</style>
+
+<table>
+  <tbody>
+    {#each docs as doc}
+      <tr>
+        <DocListItem id={doc.number} title={doc.title} />
+      </tr>
+    {/each}
+  </tbody>
+</table>
