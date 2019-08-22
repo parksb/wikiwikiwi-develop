@@ -2,6 +2,8 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
+import json from 'rollup-plugin-json';
+import builtins from 'rollup-plugin-node-builtins';
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -35,6 +37,8 @@ export default {
 			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
 		}),
 		commonjs(),
+		json(),
+		builtins(),
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
