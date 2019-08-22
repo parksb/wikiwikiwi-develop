@@ -1,5 +1,5 @@
 <script>
-	import { Router, Link, Route } from 'svelte-routing';
+	import { Router, Route } from 'svelte-routing';
 	import Header from './Header.svelte';
 	import DocList from './DocList.svelte';
 	import Doc from './Doc.svelte';
@@ -8,7 +8,7 @@
 
 <Router>
   <Header />
-	<Route path='/'><DocList /></Route>
-  <Route path='doc/:id' component='{Doc}' />
+	<Route path="/"><DocList /></Route>
+  <Route path="doc/:id" component="{Doc}" />
   <Footer />
 </Router>

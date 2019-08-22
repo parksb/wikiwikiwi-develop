@@ -9,7 +9,7 @@ function fetchDocList() {
       body,
       labels,
     };
-  })
+  });
 }
 
 export default fetchDocList;

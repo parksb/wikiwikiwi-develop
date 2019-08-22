@@ -12,6 +12,6 @@
 
 <header>
 	<h1>
-    <Link to='/'>{emoji} ParkSB Wiki</Link>
+    <Link to="/">{emoji} ParkSB Wiki</Link>
 	</h1>
 </header>

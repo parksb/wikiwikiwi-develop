@@ -1,5 +1,5 @@
 <script>
-  import { Router, Link, Route } from 'svelte-routing';
+  import { Router, Link } from 'svelte-routing';
   import Doc from './Doc.svelte';
   export let id = '';
   export let title = '';
@@ -12,7 +12,7 @@
 </style>
 
 <Router>
-  <Link to='doc/{id}'>
+  <Link to="doc/{id}">
     <td>📄</td>
     <td>#{id}</td>
     <td>{title}</td>

@@ -11,4 +11,3 @@ function fetchDoc(id) {
 }
 
 export default fetchDoc;
-
