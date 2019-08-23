@@ -56,3 +56,12 @@ button:active {
 button:focus {
 	border-color: #666;
 }
+
+article ul,
+article ol {
+  padding-left:15px;
+}
+
+article img {
+	width: 100%;
+}

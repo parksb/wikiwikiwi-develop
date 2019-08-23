@@ -60,8 +60,8 @@ li > code {
   display:none;
 }
 
-.footnotes-sep {
-  display:none;
+.katex mtd {
+  text-align: left;
 }
 
 /* markdon-it-footnote */
@@ -70,11 +70,10 @@ li > code {
   font-size: 14px;
 }
 
-.footnotes p {
-  margin: 0;
+.footnotes-sep {
+  display:none;
 }
 
-ul,
-ol {
-  padding-left:25px;
+.footnotes p {
+  margin: 0;
 }
