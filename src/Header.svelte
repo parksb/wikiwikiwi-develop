@@ -4,6 +4,7 @@
     '👨‍💻', '🐱', '🦊', '📚', '📖',
     '📑', '🔭', '🤔', '👀', '👨‍🏭',
     '👨‍🚀', '👨‍🎨', '🎮', '🛠', '🍺',
+    '🥝', '🤯', '🤖', '🍕', '🐦',
   ];
 	const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 </script>
@@ -16,6 +17,6 @@
 
 <header>
 	<h1>
-    <Link to="/">{emoji} ParkSB Wiki</Link>
+    <Link to="/">{emoji} WikiwiKiwi</Link>
 	</h1>
 </header>

@@ -6,8 +6,6 @@
 
   const { title, body, labels } = fetchDoc(id);
   const bodyHTML = convertMarkdownToHTML(body);
-
-  document.title = `ParkSB Wiki - ${title}`;
 </script>
 
 <style>

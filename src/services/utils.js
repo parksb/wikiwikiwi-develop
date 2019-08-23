@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 function requestGitHubAPI(id = null, param = '') {
-  const baseUrl = 'https://api.github.com/repos/ParkSB/parksbwiki-docs/issues';  
+  const baseUrl = 'https://api.github.com/repos/ParkSB/wikiwikiwi-docs/issues';  
   let url = baseUrl;  
 
   if (id) {
