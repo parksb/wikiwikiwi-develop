@@ -11,6 +11,10 @@
   td {
     text-decoration: inherit;
   }
+
+  .label-column {
+    float: right;
+  }
 </style>
 
 <Router>
@@ -19,7 +23,7 @@
     <td>#{id}</td>
     <td>{title}</td>
   </Link>
-  <td>
+  <td class="label-column">
     {#each labels as label}
       <Link to="/label/{label.name}">
         <span style="background-color: #{label.color};">{label.name}</span>

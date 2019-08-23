@@ -1,6 +1,10 @@
 <script>
   import { Link } from 'svelte-routing';
-	const emojis = ['👨‍💻', '🐱', '🦊', '📚', '📖', '📑', '🔭'];
+	const emojis = [
+    '👨‍💻', '🐱', '🦊', '📚', '📖',
+    '📑', '🔭', '🤔', '👀', '👨‍🏭',
+    '👨‍🚀', '👨‍🎨', '🎮', '🛠', '🍺',
+  ];
 	const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 </script>
 
