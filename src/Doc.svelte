@@ -1,9 +1,13 @@
 <script>
   import fetchDoc from './services/fetchDoc';
   import convertMarkdownToHTML from './services/convertMarkdownToHTML';
+
   export let id = '';
-  const { title } = fetchDoc(id);
-  const body = convertMarkdownToHTML(doc.body);
+
+  const { title, body, labels } = fetchDoc(id);
+  const bodyHTML = convertMarkdownToHTML(body);
+
+  document.title = `ParkSB Wiki - ${title}`;
 </script>
 
 <style>
@@ -15,5 +19,5 @@
 
 <article>
   <h1>{title}</h1>
-  {@html body}
+  {@html bodyHTML}
 </article>

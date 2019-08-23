@@ -8,7 +8,12 @@
 
 <Router>
   <Header />
+
 	<Route path="/"><DocList /></Route>
+	<Route path="label/:name" let:params>
+		<DocList param="{params.name}" />
+	</Route>
   <Route path="doc/:id" component="{Doc}" />
+
   <Footer />
 </Router>

@@ -1,9 +1,19 @@
 import $ from 'jquery';
 
-function requestGitHubAPI(id = null) {
-  const baseUrl = 'https://api.github.com/repos/ParkSB/parksb-wiki-docs/issues';  
+function requestGitHubAPI(id = null, param = '') {
+  const baseUrl = 'https://api.github.com/repos/ParkSB/parksbwiki-docs/issues';  
+  let url = baseUrl;  
+
+  if (id) {
+    url += `/${id}`; 
+  }
+
+  if (param) {
+    url += `?${param}`;
+  }
+
   return $.ajax({
-    url: id ? `${baseUrl}/${id}` : baseUrl,
+    url,
     dataType: 'JSON',
     async: false,
   }).responseJSON;

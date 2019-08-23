@@ -1,7 +1,10 @@
 <script>
   import fetchDocList from './services/fetchDocList';
   import DocListItem from './DocListItem.svelte';
-  const docs = fetchDocList(); 
+
+  export let param = '';
+
+  const docs = fetchDocList(param); 
 </script>
 
 <style>
@@ -14,7 +17,11 @@
   <tbody>
     {#each docs as doc}
       <tr>
-        <DocListItem id={doc.number} title={doc.title} />
+        <DocListItem
+          id={doc.number}
+          title={doc.title}
+          labels={doc.labels}
+        />
       </tr>
     {/each}
   </tbody>

@@ -1,7 +1,7 @@
 import { requestGitHubAPI } from './utils';
 
-function fetchDocList() {
-  const data = requestGitHubAPI();
+function fetchDocList(param = '') {
+  const data = requestGitHubAPI(null, param);
   return data.map(({ number, title, body, labels }) => {
     return {
       number,
