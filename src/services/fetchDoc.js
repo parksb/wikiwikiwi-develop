@@ -6,8 +6,10 @@ function fetchDoc(id) {
     title,
     body,
     labels,
+    created_at,
+    updated_at,
   } = requestGitHubAPI(id);
-  return { number, title, body, labels };
+  return { number, title, body, labels, created_at, updated_at };
 }
 
 export default fetchDoc;
