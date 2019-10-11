@@ -6,6 +6,7 @@
 </style>
 
 <footer>
+  <a href="/doc/15">🤔wikiwikiwi?</a>
   <a href="https://parksb.github.io/" target="_blank" rel="noopener">🌐parksb.github.io</a>
   <a href="https://github.com/ParkSB/" target="_blank" rel="noopener">⛓️github.com/ParkSB</a>
 </footer>
