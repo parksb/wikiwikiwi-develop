@@ -22,6 +22,7 @@
           id={doc.number}
           title={doc.title}
           labels={doc.labels}
+          createdAt={doc.created_at}
         />
       </tr>
     {/each}

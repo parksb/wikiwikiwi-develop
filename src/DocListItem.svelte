@@ -5,6 +5,9 @@
   export let id = '';
   export let title = '';
   export let labels = [];
+  export let createdAt = '';
+
+  createdAt = createdAt.replace(/T\d{2}:\d{2}:\d{2}Z/g, '');
 </script>
 
 <style>
@@ -15,6 +18,12 @@
   .label-column {
     float: right;
   }
+
+  time {
+    font-size: 12px;
+    font-style: italic;
+    color: #afafaf;
+  }
 </style>
 
 <Router>
@@ -22,6 +31,7 @@
     <td>📄</td>
     <td>#{id}</td>
     <td>{title}</td>
+    <td><time datetime="{createdAt}">{createdAt}</time></td>
   </Link>
   <td class="label-column">
     {#each labels as label}
