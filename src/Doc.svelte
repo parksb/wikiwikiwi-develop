@@ -18,7 +18,7 @@
     margin-bottom: 0;
   }
 
-  date {
+  .metadata {
     font-size: 14px;
     font-style: italic;
     color: #9f9f9f;
@@ -27,6 +27,9 @@
 
 <article>
   <h1>📄 {title}</h1>
-  <date>Created: <time datetime="{created_at}">{created_at}</time>, Updated: <time datetime="{updated_at}">{updated_at}</time></date>
+  <div class="metadata">
+    <a href="https://github.com/ParkSB/wikiwikiwi-docs/issues/{id}" target="_blank" rel="noopener">issues/{id}</a>
+    <date>Created: <time datetime="{created_at}">{created_at}</time>, Updated: <time datetime="{updated_at}">{updated_at}</time></date>
+  </div>
   {@html bodyHTML}
 </article>
