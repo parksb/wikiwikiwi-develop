@@ -9,7 +9,9 @@
 <Router>
   <Header />
 
-	<Route path="/"><DocList /></Route>
+	<Route path="/">
+	  <DocList param="sort=updated" />
+  </Route>
 	<Route path="label/:name" let:params>
 		<DocList param="labels={params.name}" />
 	</Route>
