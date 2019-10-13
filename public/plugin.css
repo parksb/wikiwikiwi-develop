@@ -66,14 +66,25 @@ li > code {
 
 /* markdon-it-footnote */
 
-.footnotes {
-  font-size: 14px;
-}
-
-.footnotes-sep {
-  display:none;
+.footnote-ref {
+  line-height: 0;
 }
 
 .footnotes p {
   margin: 0;
+  display: inline;
+}
+
+.footnotes > ol.footnotes-list {
+  padding: 0;
+  counter-reset: list;
+}
+
+.footnotes > ol.footnotes-list > li {
+  list-style: none;
+}
+
+.footnotes > ol.footnotes-list > li:before {
+	content: "[" counter(list) "] ";
+	counter-increment: list;
 }

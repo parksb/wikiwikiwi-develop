@@ -10,7 +10,7 @@
 
 <style>
   article {
-    padding: 0 0 10px 0;
+    padding: 10px 0 10px 0;
     line-height: 190%;
   }
 

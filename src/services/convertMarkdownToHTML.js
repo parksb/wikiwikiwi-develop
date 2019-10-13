@@ -17,6 +17,13 @@ function convertMarkdownToHTML(markdown) {
       delimiters: 'gitlab',
       macros: { '\\RR': '\\mathbb{R}' },
     });
+
+  markdownit.renderer.rules.footnote_block_open = () => (
+    '<h2>Footnotes</h2>\n' +
+    '<section class="footnotes">\n' +
+    '<ol class="footnotes-list">\n'
+  );
+
   return markdownit.render(markdown);
 }
 

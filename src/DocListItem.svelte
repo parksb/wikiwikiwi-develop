@@ -15,14 +15,14 @@
     text-decoration: inherit;
   }
 
-  .label-column {
-    float: right;
-  }
-
   time {
     font-size: 12px;
     font-style: italic;
     color: #afafaf;
+  }
+
+  .label-column {
+    float: right;
   }
 </style>
 
