@@ -52,16 +52,18 @@ li > code {
 
 /* markdown-it-texmath */
 
-.katex {
-  font-family:'Times New Roman', serif;
-}
-
-.katex-html {
-  display:none;
-}
-
-.katex mtd {
+.katex * {
+  font-family: 'Times New Roman', serif;
   text-align: left;
+}
+
+.katex .mathdefault {
+  font-family: 'Times New Roman', serif;
+}
+
+p .katex,
+li .katex {
+  font-size: 1.0em;
 }
 
 /* markdon-it-footnote */
