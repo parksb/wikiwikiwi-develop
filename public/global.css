@@ -67,3 +67,14 @@ article ol {
 article img {
 	max-width: 100%;
 }
+
+article blockquote {
+	margin: 0;
+	padding-left: 15px;
+	color: #6a737d;
+	border-left: 5px #dfe2e5 solid;
+}
+
+article > blockquote:first-of-type {
+	display: none;
+}
