@@ -21,7 +21,8 @@
   .metadata {
     font-size: 14px;
     font-style: italic;
-    color: #9f9f9f;
+    color: #afafaf;
+    line-height: 170%;
   }
 </style>
 
