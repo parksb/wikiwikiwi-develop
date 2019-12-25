@@ -6,6 +6,10 @@ import mdTex from 'markdown-it-texmath';
 
 function convertMarkdownToHTML(markdown) {
   var markdownit = new md({
+    linkify: true,
+    typographer: true,
+    quotes: '“”‘’',
+    langPrefix: 'language-',
     highlight: (str, lang) => {
       if (lang && hljs.getLanguage(lang)) {
         return `<pre class="hljs"><code>${hljs.highlight(lang, str, true).value}</code></pre>`;
