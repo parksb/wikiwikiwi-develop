@@ -78,3 +78,11 @@ article blockquote {
 article > blockquote:first-of-type {
 	display: none;
 }
+
+article li > input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+article li > label {
+	display: inline;
+}

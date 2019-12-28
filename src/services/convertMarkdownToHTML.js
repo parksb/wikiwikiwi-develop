@@ -3,6 +3,7 @@ import hljs from 'highlight.js';
 import mdFootnote from 'markdown-it-footnote';
 import katex from 'katex';
 import mdTex from 'markdown-it-texmath';
+import mdCheckbox from 'markdown-it-checkbox';
 
 function convertMarkdownToHTML(markdown) {
   var markdownit = new md({
@@ -20,7 +21,8 @@ function convertMarkdownToHTML(markdown) {
     .use(mdTex.use(katex), {
       delimiters: 'gitlab',
       macros: { '\\RR': '\\mathbb{R}' },
-    });
+    })
+    .use(mdCheckbox);
 
   markdownit.renderer.rules.footnote_block_open = () => (
     '<h2>Footnotes</h2>\n' +
