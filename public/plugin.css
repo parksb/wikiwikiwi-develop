@@ -66,7 +66,7 @@ li .katex {
   font-size: 1.0em;
 }
 
-/* markdon-it-footnote */
+/* markdown-it-footnote */
 
 .footnote-ref {
   line-height: 0;
@@ -89,4 +89,11 @@ li .katex {
 .footnotes > ol.footnotes-list > li:before {
 	content: "[" counter(list) "] ";
 	counter-increment: list;
+}
+
+/* markdown-it-table-of-contents */
+
+article > .table-of-contents  {
+  padding: 0 25px;
+  border: 1px #000 solid;
 }

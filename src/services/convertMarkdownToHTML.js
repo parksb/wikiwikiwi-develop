@@ -4,6 +4,8 @@ import mdFootnote from 'markdown-it-footnote';
 import katex from 'katex';
 import mdTex from 'markdown-it-texmath';
 import mdCheckbox from 'markdown-it-checkbox';
+import mdAnchor from 'markdown-it-anchor';
+import mdTableOfContents from 'markdown-it-table-of-contents';
 
 function convertMarkdownToHTML(markdown) {
   var markdownit = new md({
@@ -22,7 +24,11 @@ function convertMarkdownToHTML(markdown) {
       delimiters: 'gitlab',
       macros: { '\\RR': '\\mathbb{R}' },
     })
-    .use(mdCheckbox);
+    .use(mdCheckbox)
+    .use(mdAnchor)
+    .use(mdTableOfContents, {
+      includeLevel: [1, 2, 3],
+    });
 
   markdownit.renderer.rules.footnote_block_open = () => (
     '<h2>Footnotes</h2>\n' +
